@@ -1,0 +1,1 @@
+{"version":3,"sources":["partials/_fonts.scss","bio.css","partials/_header.scss","partials/_colors.scss","bio.scss"],"names":[],"mappings":"AAEA;EACI,mBAHS;ACEb;;ACEA;EACI,aAAA;EACA,8BAAA;EACA,yBCNe;EDOf,aAAA;ADCJ;;ACGI;EACI,aAAA;EACA,gBAAA;ADAR;ACGI;EACI,cAAA;ADDR;ACII;EACI,cCtBQ;EDuBR,gCAAA;ADFR;ACIQ;EACI,cC1BI;AFwBhB;;AGpBA;EACI,sBAAA;AHuBJ","file":"bio.css"}

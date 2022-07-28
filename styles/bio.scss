@@ -1,4 +1,6 @@
-@use 'partials/mixins' as *;
+@use "partials/mixins" as *;
+@use "partials/header" as *;
+@use "partials/fonts" as *;
 
 *, *::before, *::after {
     box-sizing: border-box;
