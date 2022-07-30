@@ -1,7 +1,101 @@
-@use "partials/mixins" as *;
-@use "partials/header" as *;
-@use "partials/fonts" as *;
+@use "./partials/mixins" as *;
+@use "./partials/fonts" as *;
+@use "./partials/colors" as *;
 
 *, *::before, *::after {
     box-sizing: border-box;
+}
+
+body {
+    font-family: 'AvenirNext LT Pro';
+}
+
+header {
+    background-color: $color-bandsite-black;
+    background-size: cover;
+    padding: 1rem;
+    margin: 0;
+}
+
+.navbar {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; 
+    flex-direction: column;
+    color: $color-white; 
+    @include tablet {
+        flex-direction: row;
+    }
+    @include desktop {
+        flex-direction: row;
+    }
+}
+
+.navbar {
+    &__title-container {
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 700;
+        max-height: 1.25rem;
+        max-width: 7.5rem;
+        @include tablet {
+            font-size: 3.75rem;
+            flex-direction: row;
+        }
+        @include desktop {
+            font-size: 3.75rem;
+            flex-direction: row;
+        }
+    }
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        padding: 0rem;
+        font-size: 0.875rem;
+        font-weight: 600;
+        max-height: 1.375rem;
+        @include tablet {
+            font-size: 1.5rem;
+            max-height: 2rem;
+            flex-direction: row;
+        }
+        @include desktop {
+            font-size: 1.5rem;
+            max-height: 2rem;
+            flex-direction: row;
+        } 
+    }
+
+    &__item {
+        margin: 0rem;
+    }
+
+    &__second-item {
+        margin: 0rem;
+    }
+
+    &__link {
+        color: $color-silver;
+        /*justify-content: space-between;
+        align-items: center;*/
+        text-decoration: none;
+        padding: 1rem;
+        
+        
+        &--active {
+            /*display: grid;*/
+            border-bottom: 3px solid $color-white;
+            color: $color-white;
+            padding-bottom: 1rem;
+            max-width: 0.875rem; 
+        }
+
+        &:hover {
+            @extend .navbar__link--active;
+            color: $color-bandsite-dark-black;
+            transition: 0.4s;
+        }
+    }
 }
