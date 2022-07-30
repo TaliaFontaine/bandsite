@@ -100,13 +100,10 @@ header {
 }
 .navbar__link {
   color: #AFAFAF;
-  /*justify-content: space-between;
-  align-items: center;*/
   text-decoration: none;
   padding: 1rem;
 }
 .navbar__link--active, .navbar__link:hover {
-  /*display: grid;*/
   border-bottom: 3px solid #FFFFFF;
   color: #FFFFFF;
   padding-bottom: 1rem;

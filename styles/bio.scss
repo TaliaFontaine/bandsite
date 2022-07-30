@@ -78,14 +78,11 @@ header {
 
     &__link {
         color: $color-silver;
-        /*justify-content: space-between;
-        align-items: center;*/
         text-decoration: none;
         padding: 1rem;
         
         
         &--active {
-            /*display: grid;*/
             border-bottom: 3px solid $color-white;
             color: $color-white;
             padding-bottom: 1rem;
