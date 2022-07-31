@@ -28,7 +28,7 @@ header {
   background-color: #323232;
   background-size: cover;
   padding: 1rem;
-  margin: 0;
+  border-bottom: 0.01rem solid #E1E1E1;
 }
 
 .navbar {
@@ -41,17 +41,23 @@ header {
 @media (min-width: 768px) {
   .navbar {
     flex-direction: row;
+    justify-content: left;
+    align-items: center;
   }
 }
 @media (min-width: 1200px) {
   .navbar {
     flex-direction: row;
+    justify-content: left;
+    align-items: center;
   }
 }
 
 .navbar__title-container {
-  text-align: center;
-  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
   font-weight: 700;
   max-height: 1.25rem;
   max-width: 7.5rem;
@@ -60,12 +66,16 @@ header {
   .navbar__title-container {
     font-size: 3.75rem;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 @media (min-width: 1200px) {
   .navbar__title-container {
     font-size: 3.75rem;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 .navbar__list {
@@ -73,6 +83,7 @@ header {
   justify-content: space-between;
   align-items: center;
   list-style: none;
+  width: 50%;
   padding: 0rem;
   font-size: 0.875rem;
   font-weight: 600;
@@ -83,6 +94,7 @@ header {
     font-size: 1.5rem;
     max-height: 2rem;
     flex-direction: row;
+    padding: 2rem;
   }
 }
 @media (min-width: 1200px) {
@@ -90,6 +102,7 @@ header {
     font-size: 1.5rem;
     max-height: 2rem;
     flex-direction: row;
+    padding: 2rem;
   }
 }
 .navbar__item {
@@ -101,15 +114,143 @@ header {
 .navbar__link {
   color: #AFAFAF;
   text-decoration: none;
-  padding: 1rem;
+  padding: 0rem;
 }
 .navbar__link--active, .navbar__link:hover {
   border-bottom: 3px solid #FFFFFF;
   color: #FFFFFF;
-  padding-bottom: 1rem;
+  padding-bottom: 1.85rem;
   max-width: 0.875rem;
+}
+@media (min-width: 768px) {
+  .navbar__link--active, .navbar__link:hover {
+    padding-bottom: 3.5rem;
+  }
+}
+@media (min-width: 1200px) {
+  .navbar__link--active, .navbar__link:hover {
+    padding-bottom: 3.5rem;
+  }
 }
 .navbar__link:hover {
   color: #000000;
   transition: 0.4s;
+}
+
+.hero-section {
+  display: flex;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/images/hero-bio.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  color: #FFFFFF;
+  padding: 1rem;
+}
+.hero-section__hero-title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+@media (min-width: 768px) {
+  .hero-section__hero-title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+  }
+}
+@media (min-width: 1200px) {
+  .hero-section__hero-title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+  }
+}
+
+.about-quote {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+}
+.about-quote__title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  margin: 0rem 1rem;
+}
+@media (min-width: 768px) {
+  .about-quote__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+    padding-top: 3rem;
+    padding-bottom: 2.25rem;
+  }
+}
+@media (min-width: 1200px) {
+  .about-quote__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+    padding-top: 3rem;
+    padding-bottom: 2.25rem;
+  }
+}
+.about-quote__container {
+  display: flex;
+  flex-direction: column;
+  margin: 0rem 1rem;
+  padding-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .about-quote__container {
+    margin: 2.25rem;
+    padding-bottom: 2.25rem;
+  }
+}
+@media (min-width: 1200px) {
+  .about-quote__container {
+    margin: auto;
+    padding-bottom: 2.25rem;
+  }
+}
+.about-quote__image {
+  margin: 0rem;
+}
+.about-quote__by-vocalist {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 600;
+}
+@media (min-width: 768px) {
+  .about-quote__by-vocalist {
+    font-size: 1.5rem;
+    max-height: 2rem;
+  }
+}
+@media (min-width: 1200px) {
+  .about-quote__by-vocalist {
+    font-size: 1.5rem;
+    max-height: 2rem;
+  }
+}
+.about-quote__vocalist-name {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 600;
+}
+@media (min-width: 768px) {
+  .about-quote__vocalist-name {
+    font-size: 1.5rem;
+    max-height: 2rem;
+  }
+}
+@media (min-width: 1200px) {
+  .about-quote__vocalist-name {
+    font-size: 1.5rem;
+    max-height: 2rem;
+  }
 }/*# sourceMappingURL=bio.css.map */

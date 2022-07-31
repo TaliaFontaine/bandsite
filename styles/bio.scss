@@ -14,7 +14,8 @@ header {
     background-color: $color-bandsite-black;
     background-size: cover;
     padding: 1rem;
-    margin: 0;
+    border-bottom: 0.01rem solid $color-mercury;
+    
 }
 
 .navbar {
@@ -25,26 +26,37 @@ header {
     color: $color-white; 
     @include tablet {
         flex-direction: row;
+        justify-content: left;
+        align-items: center;
     }
     @include desktop {
         flex-direction: row;
+        justify-content: left;
+        align-items: center;
     }
 }
 
 .navbar {
     &__title-container {
-        text-align: center;
-        font-size: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
         font-weight: 700;
         max-height: 1.25rem;
         max-width: 7.5rem;
         @include tablet {
             font-size: 3.75rem;
             flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            
         }
         @include desktop {
             font-size: 3.75rem;
             flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
         }
     }
     &__list {
@@ -52,6 +64,7 @@ header {
         justify-content: space-between;
         align-items: center;
         list-style: none;
+        width: 50%;
         padding: 0rem;
         font-size: 0.875rem;
         font-weight: 600;
@@ -60,11 +73,13 @@ header {
             font-size: 1.5rem;
             max-height: 2rem;
             flex-direction: row;
+            padding: 2rem;
         }
         @include desktop {
             font-size: 1.5rem;
             max-height: 2rem;
             flex-direction: row;
+            padding: 2rem;
         } 
     }
 
@@ -79,14 +94,20 @@ header {
     &__link {
         color: $color-silver;
         text-decoration: none;
-        padding: 1rem;
+        padding: 0rem;
         
         
         &--active {
             border-bottom: 3px solid $color-white;
             color: $color-white;
-            padding-bottom: 1rem;
-            max-width: 0.875rem; 
+            padding-bottom: 1.85rem;
+            max-width: 0.875rem;
+            @include tablet {
+                padding-bottom: 3.5rem;
+            }
+            @include desktop {
+                padding-bottom: 3.5rem;
+            }
         }
 
         &:hover {
@@ -94,5 +115,104 @@ header {
             color: $color-bandsite-dark-black;
             transition: 0.4s;
         }
+    }
+}
+
+.hero-section {
+    display: flex;
+    background-image: linear-gradient(rgba($color-bandsite-dark-black, 0.5), rgba($color-bandsite-dark-black, 0.5)), url(../assets/images/hero-bio.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    color: $color-white;
+    padding: 1rem;
+
+    &__hero-title {
+        font-size: 1.5rem;
+        line-height: 2rem; 
+        font-weight: 700; 
+        @include tablet {
+            font-size: 2.25rem;
+            line-height: 2.75rem;
+            font-weight: 700;
+        }
+        @include desktop {
+            font-size: 2.25rem;
+            line-height: 2.75rem;
+            font-weight: 700;
+        }
+    }
+}
+
+.about-quote {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-white;
+    &__title {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 700;
+        padding-top: 1.5rem;
+        padding-bottom: 1rem;
+        margin: 0rem 1rem;
+        @include tablet {
+            font-size: 2.25rem;
+            line-height: 2.75rem;
+            font-weight: 700;
+            padding-top: 3rem;
+            padding-bottom: 2.25rem;
+        }
+        @include desktop {
+            font-size: 2.25rem;
+            line-height: 2.75rem;
+            font-weight: 700;
+            padding-top: 3rem;
+            padding-bottom: 2.25rem;
+        } 
+    }
+    &__container {
+        display: flex;
+        flex-direction: column;
+        margin: 0rem 1rem;
+        padding-bottom: 1rem;
+        @include tablet {
+            margin: 2.25rem;
+            padding-bottom: 2.25rem;
+        }
+        @include desktop {
+            margin: auto;
+            padding-bottom: 2.25rem;
+        }
+    }
+    &__image {
+        margin: 0rem;
+    }
+    &__by-vocalist {
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+        font-weight: 600;
+        @include tablet {
+            font-size: 1.5rem;
+            max-height: 2rem; 
+        }
+        @include desktop {
+            font-size: 1.5rem;
+            max-height: 2rem;
+        }
+    }
+    &__vocalist-name {
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+        font-weight: 600;
+        @include tablet {
+            font-size: 1.5rem;
+            max-height: 2rem; 
+        }
+        @include desktop {
+            font-size: 1.5rem;
+            max-height: 2rem;
+        } 
     }
 }
