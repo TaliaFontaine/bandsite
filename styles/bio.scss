@@ -14,7 +14,7 @@ header {
     background-color: $color-bandsite-black;
     background-size: cover;
     padding: 1rem;
-    border-bottom: 0.01rem solid $color-mercury;
+    border-bottom: 0.0625rem stroke $color-mercury;
     
 }
 
@@ -125,23 +125,28 @@ header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    height: 100vh;
+    height: 50vh;
     color: $color-white;
     padding: 1rem;
-
+    @include tablet {
+        height: 140vh;
+    }
+    @include desktop {
+        height: 170vh;
+    }
     &__hero-title {
-        font-size: 1.5rem;
+        font-size: 2rem;
         line-height: 2rem; 
-        font-weight: 700; 
+        font-weight: 600;
         @include tablet {
             font-size: 2.25rem;
             line-height: 2.75rem;
-            font-weight: 700;
+            font-weight: 600;
         }
         @include desktop {
             font-size: 2.25rem;
             line-height: 2.75rem;
-            font-weight: 700;
+            font-weight: 600;
         }
     }
 }
@@ -153,53 +158,50 @@ header {
     &__title {
         font-size: 1.5rem;
         line-height: 2rem;
-        font-weight: 700;
+        font-weight: 600;
         padding-top: 1.5rem;
         padding-bottom: 1rem;
         margin: 0rem 1rem;
         @include tablet {
             font-size: 2.25rem;
             line-height: 2.75rem;
-            font-weight: 700;
+            font-weight: 600;
             padding-top: 3rem;
-            padding-bottom: 2.25rem;
+            margin-bottom: 1rem;
         }
         @include desktop {
             font-size: 2.25rem;
             line-height: 2.75rem;
-            font-weight: 700;
+            font-weight: 600;
             padding-top: 3rem;
-            padding-bottom: 2.25rem;
+            margin-bottom: 1rem;
         } 
     }
     &__container {
         display: flex;
         flex-direction: column;
         margin: 0rem 1rem;
-        padding-bottom: 1rem;
         @include tablet {
-            margin: 2.25rem;
-            padding-bottom: 2.25rem;
+            margin: 0rem 6rem;    
         }
         @include desktop {
-            margin: auto;
-            padding-bottom: 2.25rem;
+            margin: 0rem 14rem;   
         }
-    }
-    &__image {
-        margin: 0rem;
     }
     &__by-vocalist {
         font-size: 0.875rem;
         line-height: 1.375rem;
         font-weight: 600;
+        margin-bottom: -0.5rem;
         @include tablet {
             font-size: 1.5rem;
-            max-height: 2rem; 
+            max-height: 2rem;
+            margin-bottom: 2rem; 
         }
         @include desktop {
             font-size: 1.5rem;
             max-height: 2rem;
+            margin-bottom: 1rem;
         }
     }
     &__vocalist-name {
@@ -214,5 +216,115 @@ header {
             font-size: 1.5rem;
             max-height: 2rem;
         } 
+    }
+}
+
+.about-musicians {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-white;
+    margin: 0rem 1rem;
+    &__title {
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+        font-weight: 600;
+        @include tablet {
+            font-size: 1.5rem;
+            max-height: 2rem;
+            margin: 2rem 5rem 1rem 5rem; 
+        }
+        @include desktop {
+            font-size: 1.5rem;
+            max-height: 2rem;
+            margin: 2rem 13rem 1rem 13rem; 
+        } 
+    }
+}
+
+.paragraph-section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0rem 1rem;
+    justify-content: center;
+    align-items: center;
+    @include tablet {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0rem 5rem 1rem 6rem; 
+    }
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0rem 14rem 1rem 14rem; 
+    }
+    &__paragraph {
+        font-size: 0.8125rem;
+        line-height: 1.125rem;
+        font-weight: 400;
+        @include tablet {
+            font-size: 0.875rem;
+            line-height: 1.375rem;
+        }
+        @include desktop {
+            font-size: 0.875rem;
+            line-height: 1.375rem;
+        }
+    }
+}
+
+.photo-gallery-section {
+    background-color: $color-alabaster;
+    background-size: cover;
+}
+
+.photo-title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    padding-top: 1rem;
+    margin: 0.5rem 1rem -0.5rem 1rem;
+    @include tablet {
+        font-size: 2.25rem;
+        line-height: 2.75rem;
+        font-weight: 600;
+        padding-top: 3rem;
+        margin: 0.5rem 1rem -0.5rem 1rem;
+    }
+    @include desktop {
+        font-size: 2.25rem;
+        line-height: 2.75rem;
+        font-weight: 600;
+        padding-top: 3rem;
+        margin: 2rem 1rem 1rem 6rem;
+    } 
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+        flex-direction: row;
+        flex-wrap: wrap; 
+    }
+    @include desktop {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0rem 5rem;
+    }
+    &__item {
+        padding: 1rem;
+        
+        @include tablet {
+            width: 33%;
+        }
+        @include desktop {
+            width: 33%;   
+        }
+    }
+    &__image {
+        width: 100%;
     }
 }
