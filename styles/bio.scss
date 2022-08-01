@@ -14,8 +14,7 @@ header {
     background-color: $color-bandsite-black;
     background-size: cover;
     padding: 1rem;
-    border-bottom: 0.0625rem stroke $color-mercury;
-    
+    border-bottom: 0.0625rem stroke $color-mercury;  
 }
 
 .navbar {
@@ -28,11 +27,13 @@ header {
         flex-direction: row;
         justify-content: left;
         align-items: center;
+        margin: 0rem 1rem 0rem 2rem;
     }
     @include desktop {
         flex-direction: row;
         justify-content: left;
         align-items: center;
+        margin: 0rem 1rem 0rem 6rem;
     }
 }
 
@@ -41,19 +42,18 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 2rem;
-        font-weight: 700;
-        max-height: 1.25rem;
-        max-width: 7.5rem;
+        @include page-header-mobile-logo;
         @include tablet {
             font-size: 3.75rem;
+            line-height: 4.25rem;
             flex-direction: row;
             justify-content: space-between;
-            align-items: center;
-            
+            align-items: center; 
+            padding-bottom: 1rem; 
         }
         @include desktop {
             font-size: 3.75rem;
+            line-height: 4.25rem;
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
@@ -82,21 +82,16 @@ header {
             padding: 2rem;
         } 
     }
-
     &__item {
         margin: 0rem;
     }
-
     &__second-item {
         margin: 0rem;
     }
-
     &__link {
         color: $color-silver;
         text-decoration: none;
         padding: 0rem;
-        
-        
         &--active {
             border-bottom: 3px solid $color-white;
             color: $color-white;
@@ -142,11 +137,13 @@ header {
             font-size: 2.25rem;
             line-height: 2.75rem;
             font-weight: 600;
+            margin: 0rem 1rem 0rem 2rem;
         }
         @include desktop {
             font-size: 2.25rem;
             line-height: 2.75rem;
             font-weight: 600;
+            margin: 2rem 1rem 1rem 6rem;
         }
     }
 }
@@ -167,14 +164,14 @@ header {
             line-height: 2.75rem;
             font-weight: 600;
             padding-top: 3rem;
-            margin-bottom: 1rem;
+            margin: 0rem 1rem 0rem 2rem;
         }
         @include desktop {
             font-size: 2.25rem;
             line-height: 2.75rem;
             font-weight: 600;
             padding-top: 3rem;
-            margin-bottom: 1rem;
+            margin: 2rem 1rem 1rem 6rem;
         } 
     }
     &__container {
@@ -244,21 +241,20 @@ header {
 .paragraph-section {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     margin: 0rem 1rem;
     justify-content: center;
     align-items: center;
     @include tablet {
-        display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
-        margin: 0rem 5rem 1rem 6rem; 
+        justify-content: space-around;
+        margin: 0rem 8rem 1rem 5rem; 
+        padding:1rem;
     }
     @include desktop {
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
-        margin: 0rem 14rem 1rem 14rem; 
+        justify-content: space-around;
+        margin: 0rem 10rem 1rem 10rem; 
     }
     &__paragraph {
         font-size: 0.8125rem;
@@ -291,7 +287,7 @@ header {
         line-height: 2.75rem;
         font-weight: 600;
         padding-top: 3rem;
-        margin: 0.5rem 1rem -0.5rem 1rem;
+        margin: 0.5rem 2rem 0.5rem 2rem;
     }
     @include desktop {
         font-size: 2.25rem;
@@ -307,7 +303,8 @@ header {
     flex-direction: column;
     @include tablet {
         flex-direction: row;
-        flex-wrap: wrap; 
+        flex-wrap: wrap;
+        margin: 0rem 1rem; 
     }
     @include desktop {
         flex-direction: row;
@@ -326,5 +323,166 @@ header {
     }
     &__image {
         width: 100%;
+    }
+}
+
+footer {
+    background-color: $color-bandsite-black;
+    padding: 1rem;
+    color: $color-white;
+}
+
+.social-section {
+    display: flex;
+    &__title {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 600;
+        @include tablet {
+            flex-direction: row;
+            font-size: 2.25rem;
+            line-height: 2.75rem;
+            padding-top: 2rem;
+            margin: 0rem 1rem;
+        }
+        @include desktop {
+            flex-direction: row;
+            font-size: 2.25rem;
+            line-height: 2.75rem;
+            margin: 0rem 5rem;
+        }
+    }
+}
+
+.social-links {
+    display: flex;
+    padding: 0rem;
+    margin-left: -1rem;
+    justify-content: left;
+    align-items: center;
+    flex-direction: row;
+    @include tablet {
+        justify-content: center;
+        align-items:center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: -3rem;
+        margin-left: -6rem;
+    }
+    @include desktop {
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: -3rem;
+        margin-left: -25rem;
+    }
+    &__image{
+        flex-direction: row;
+        padding: 1rem;
+        flex-grow: 2;
+    }
+}
+
+.bandsite-agents-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0rem;
+    @include tablet {
+        flex-direction: row; 
+    }
+    @include desktop {
+        flex-direction: row;    
+    }
+    &__name {
+        @include subheader-mobile-text;
+        flex-direction: row;
+        margin: 1rem 1rem -1rem 0rem;
+    }
+    @include tablet {
+        flex-direction: row;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        padding-top: 0rem;
+        margin: 0rem 1rem;
+    }
+    @include desktop {
+        flex-direction: row;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        padding-top: 0rem;
+        margin: 0rem 1rem;
+    }
+    &__title {
+        flex-direction: row;
+        @include subheader-mobile-text;
+    }
+    @include tablet {
+        flex-direction: row;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        padding-top: 0rem;
+        margin: 0rem 1rem;
+    }
+    @include desktop {
+        flex-direction: row;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        padding-top: 0rem;
+        margin: 0rem 1rem;
+    }
+    &__address {
+        flex-direction: row;
+        @include subheader-mobile-reguler-weight;
+    }
+    @include tablet {
+        flex-direction: row;
+    }
+    @include desktop {
+        flex-direction: row;
+    }
+    &__address__two {
+        margin-top: -1rem;
+    }
+    &__email {
+        flex-direction: row;
+        @include subheader-mobile-reguler-weight;
+    }
+}
+
+.bandsite-title {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 4rem 0rem 1rem 0rem;
+    @include page-header-mobile-logo;
+    @include tablet {
+        font-size: 3.75rem;
+        line-height: 4.25rem;
+        flex-direction: row;
+        margin: -2rem 1rem 0rem 1rem;
+        padding-bottom: 1rem;   
+    }
+    @include desktop {
+        font-size: 3.75rem;
+        line-height: 4.25rem;
+        flex-direction: row;
+    }
+}
+
+.copyright-section {
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+    @include tablet {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        margin: 1rem;
+    }
+    @include desktop {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
     }
 }
