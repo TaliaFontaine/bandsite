@@ -22,12 +22,12 @@
 
 body {
   font-family: "AvenirNext LT Pro";
+  margin: 0;
 }
 
 header {
   background-color: #323232;
   background-size: cover;
-  padding: 1rem;
   /*border-bottom: 0.0625rem stroke $color-mercury;*/
 }
 
@@ -37,6 +37,7 @@ header {
   align-items: center;
   flex-direction: column;
   color: #FFFFFF;
+  padding-bottom: 0.4rem;
 }
 @media (min-width: 768px) {
   .navbar {
@@ -44,6 +45,7 @@ header {
     justify-content: left;
     align-items: center;
     margin: 0rem 1rem 0rem 2rem;
+    padding-bottom: 1.2rem;
   }
 }
 @media (min-width: 1200px) {
@@ -59,6 +61,7 @@ header {
   justify-content: center;
   align-items: center;
   width: 100%;
+  padding: 2rem 0rem 2rem 0rem;
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
@@ -81,7 +84,7 @@ header {
     line-height: 4.25rem;
     flex-direction: row;
     width: 20%;
-    margin-right: -5rem;
+    margin-right: -10rem;
   }
 }
 .navbar__list {
@@ -90,11 +93,9 @@ header {
   align-items: center;
   list-style: none;
   width: 100%;
-  padding: 0rem;
   font-size: 0.75rem;
   font-weight: 600;
   max-height: 1.375rem;
-  padding-top: 0.5rem;
 }
 @media (min-width: 768px) {
   .navbar__list {
@@ -102,11 +103,13 @@ header {
     max-height: 2rem;
     flex-direction: row;
     width: 80%;
+    padding-top: 3rem;
+    margin-left: -8rem;
   }
 }
 @media (min-width: 1200px) {
   .navbar__list {
-    font-size: 1rem;
+    font-size: 0.75rem;
     max-height: 2rem;
     flex-direction: row;
     width: 80%;
@@ -114,41 +117,47 @@ header {
 }
 .navbar__item {
   width: 50%;
-  margin: auto;
+  text-align: center;
 }
 .navbar__second-item {
   width: 50%;
-  margin: auto;
+  text-align: center;
 }
 @media (min-width: 768px) {
   .navbar__second-item {
-    margin-left: -13rem;
+    margin-left: -11rem;
   }
 }
 @media (min-width: 1200px) {
   .navbar__second-item {
-    margin-left: -28rem;
+    margin-left: -22rem;
+    padding-bottom: 0.5rem;
   }
 }
 .navbar__link {
+  display: inline-block;
   color: #AFAFAF;
   text-decoration: none;
+  width: 100%;
+  padding-bottom: 1rem;
 }
 .navbar__link--active, .navbar__link:hover {
-  border-bottom: 3px solid #FFFFFF;
+  border-bottom: 4px solid #FFFFFF;
   color: #FFFFFF;
-  padding-bottom: 0.85rem;
-  border-width: 50%;
-  /*max-width: 0.875rem;*/
+  margin: 0rem;
+  width: 100%;
 }
 @media (min-width: 768px) {
   .navbar__link--active, .navbar__link:hover {
     padding-bottom: 1rem;
+    width: 28%;
   }
 }
 @media (min-width: 1200px) {
   .navbar__link--active, .navbar__link:hover {
-    padding-bottom: 1rem;
+    border-bottom: 2px solid #FFFFFF;
+    padding-bottom: 1.4rem;
+    width: 15%;
   }
 }
 .navbar__link:hover {
@@ -169,7 +178,7 @@ header {
 }
 @media (min-width: 768px) {
   .hero-section {
-    height: 140vh;
+    height: 130vh;
   }
 }
 @media (min-width: 1200px) {
@@ -184,15 +193,15 @@ header {
 }
 @media (min-width: 768px) {
   .hero-section__title {
-    font-size: 2.25rem;
+    font-size: 4rem;
     line-height: 2.75rem;
     font-weight: 600;
-    margin: 0rem 1rem 0rem 2rem;
+    margin: 0rem 1rem 0rem 1rem;
   }
 }
 @media (min-width: 1200px) {
   .hero-section__title {
-    font-size: 2.25rem;
+    font-size: 4rem;
     line-height: 2.75rem;
     font-weight: 600;
     margin: 2rem 1rem 1rem 6rem;
@@ -369,6 +378,7 @@ header {
 .photo-gallery-section {
   background-color: #FAFAFA;
   background-size: cover;
+  margin: -1rem;
 }
 
 .photo-title {
@@ -376,7 +386,7 @@ header {
   line-height: 2rem;
   font-weight: 600;
   padding-top: 1rem;
-  margin: 0.5rem 1rem -0.5rem 1rem;
+  margin: 0.5rem 1rem -0.5rem 0rem;
 }
 @media (min-width: 768px) {
   .photo-title {
@@ -400,6 +410,7 @@ header {
 .gallery {
   display: flex;
   flex-direction: column;
+  margin: 0rem -1rem;
 }
 @media (min-width: 768px) {
   .gallery {
@@ -416,7 +427,7 @@ header {
   }
 }
 .gallery__item {
-  padding: 1rem;
+  padding: 1rem 1rem 0rem 1rem;
 }
 @media (min-width: 768px) {
   .gallery__item {
@@ -435,7 +446,19 @@ header {
 footer {
   background-color: #323232;
   padding: 1rem;
+  margin-top: 1rem;
   color: #FFFFFF;
+  position: relative;
+}
+@media (min-width: 768px) {
+  footer {
+    margin-top: 3rem;
+  }
+}
+@media (min-width: 1200px) {
+  footer {
+    margin-top: 2rem;
+  }
 }
 
 .social-section {
@@ -452,7 +475,7 @@ footer {
     font-size: 2.25rem;
     line-height: 2.75rem;
     padding-top: 2rem;
-    margin: 0rem 1rem;
+    margin: 0rem 2rem;
   }
 }
 @media (min-width: 1200px) {
@@ -479,7 +502,7 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: -3rem;
-    margin-left: -6rem;
+    margin-left: -5rem;
   }
 }
 @media (min-width: 1200px) {
@@ -508,11 +531,13 @@ footer {
 @media (min-width: 768px) {
   .bandsite-agents-info {
     flex-direction: row;
+    padding: 1rem;
   }
 }
 @media (min-width: 1200px) {
   .bandsite-agents-info {
     flex-direction: row;
+    padding: 4rem;
   }
 }
 .bandsite-agents-info__name {
@@ -608,6 +633,9 @@ footer {
     flex-direction: row;
     margin: -2rem 1rem 0rem 1rem;
     padding-bottom: 1rem;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
   }
 }
 @media (min-width: 1200px) {
@@ -615,6 +643,7 @@ footer {
     font-size: 3.75rem;
     line-height: 4.25rem;
     flex-direction: row;
+    right: 6rem;
   }
 }
 
@@ -627,12 +656,14 @@ footer {
   .copyright-section {
     font-size: 0.875rem;
     line-height: 1.25rem;
-    margin: 1rem;
+    margin: 1rem 2rem;
   }
 }
 @media (min-width: 1200px) {
   .copyright-section {
     font-size: 0.875rem;
     line-height: 1.25rem;
+    padding-left: 3rem;
+    margin-top: -3rem;
   }
 }/*# sourceMappingURL=bio.css.map */

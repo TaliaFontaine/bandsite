@@ -8,12 +8,12 @@
 
 body {
     font-family: 'AvenirNext LT Pro';
+    margin: 0;
 }
 
 header {
     background-color: $color-bandsite-black;
     background-size: cover;
-    padding: 1rem;
     /*border-bottom: 0.0625rem stroke $color-mercury;*/ 
 }
 
@@ -23,11 +23,13 @@ header {
     align-items: center;
     flex-direction: column;
     color: $color-white; 
+    padding-bottom: 0.4rem;
     @include tablet {
         flex-direction: row;
         justify-content: left;
         align-items: center;
         margin: 0rem 1rem 0rem 2rem;
+        padding-bottom: 1.2rem;
     }
     @include desktop {
         flex-direction: row;
@@ -40,6 +42,7 @@ header {
         justify-content: center;
         align-items: center;
         width: 100%;
+        padding: 2rem 0rem 2rem 0rem;
         @include page-header-mobile-logo;
         @include tablet {
             font-size: 3.75rem;
@@ -54,7 +57,7 @@ header {
             line-height: 4.25rem;
             flex-direction: row;
             width: 20%;
-            margin-right: -5rem;
+            margin-right: -10rem;
         }
     }
     &__list {
@@ -63,20 +66,19 @@ header {
         align-items: center;
         list-style: none;
         width: 100%;
-        padding: 0rem;
         font-size: 0.75rem;
         font-weight: 600;
         max-height: 1.375rem;
-        padding-top: 0.5rem;
         @include tablet {
             font-size: 1rem;
             max-height: 2rem;
             flex-direction: row;
             width: 80%;
-   
+            padding-top: 3rem;
+            margin-left: -8rem;
         }
         @include desktop {
-            font-size: 1rem;
+            font-size: 0.75rem;
             max-height: 2rem;
             flex-direction: row;
             width: 80%;
@@ -84,36 +86,40 @@ header {
     }
     &__item {
         width: 50%;
-        margin: auto;    
+        text-align: center;    
     }
     &__second-item {
         width: 50%;
-        margin: auto;
+        text-align: center;
         @include tablet {
-            margin-left: -13rem;
+            margin-left: -11rem;
         }
         @include desktop {
-            margin-left: -28rem;
+            margin-left: -22rem;
+            padding-bottom: 0.5rem;
         }
     }
     &__link {
+        display: inline-block;
         color: $color-silver;
         text-decoration: none;
+        width: 100%;
+        padding-bottom: 1rem;
         &--active {
-            border-bottom: 3px solid $color-white;
+            border-bottom: 4px solid $color-white;
             color: $color-white;
-            padding-bottom: 0.85rem;
-            border-width: 50%;
-            /*max-width: 0.875rem;*/
-            
+            margin: 0rem;
+            width: 100%;
             @include tablet {
                 padding-bottom: 1rem;
+                width: 28%;   
             }
             @include desktop {
-                padding-bottom: 1rem;
+                border-bottom: 2px solid $color-white;
+                padding-bottom: 1.4rem;
+                width: 15%;
             }
         }
-
         &:hover {
             @extend .navbar__link--active;
             color: $color-bandsite-dark-black;
@@ -133,7 +139,7 @@ header {
     color: $color-white;
     padding: 1rem;
     @include tablet {
-        height: 140vh;
+        height: 130vh;
     }
     @include desktop {
         height: 170vh;
@@ -143,13 +149,13 @@ header {
         line-height: 2rem; 
         font-weight: 600;
         @include tablet {
-            font-size: 2.25rem;
+            font-size: 4rem;
             line-height: 2.75rem;
             font-weight: 600;
-            margin: 0rem 1rem 0rem 2rem;
+            margin: 0rem 1rem 0rem 1rem;
         }
         @include desktop {
-            font-size: 2.25rem;
+            font-size: 4rem;
             line-height: 2.75rem;
             font-weight: 600;
             margin: 2rem 1rem 1rem 6rem;
@@ -253,15 +259,10 @@ header {
     margin: 0rem 0rem;
     /*justify-content: center;*/
     align-items: center;
-   
-    
-    
     @include tablet {
         flex-direction: row;
         justify-content: space-between;
-        margin: 0rem 8rem 1rem 5rem; 
-       
-       
+        margin: 0rem 8rem 1rem 5rem;   
     }
     @include desktop {
         flex-direction: row;
@@ -294,13 +295,14 @@ header {
             font-size: 0.875rem;
             line-height: 1.375rem;
         }
-        }
     }
+}
 
 
 .photo-gallery-section {
     background-color: $color-alabaster;
     background-size: cover;
+    margin: -1rem;
 }
 
 .photo-title {
@@ -308,7 +310,7 @@ header {
     line-height: 2rem;
     font-weight: 600;
     padding-top: 1rem;
-    margin: 0.5rem 1rem -0.5rem 1rem;
+    margin: 0.5rem 1rem -0.5rem 0rem;
     @include tablet {
         font-size: 2.25rem;
         line-height: 2.75rem;
@@ -328,6 +330,7 @@ header {
 .gallery {
     display: flex;
     flex-direction: column;
+    margin: 0rem -1rem;
     @include tablet {
         flex-direction: row;
         flex-wrap: wrap;
@@ -339,7 +342,7 @@ header {
         margin: 0rem 5rem;
     }
     &__item {
-        padding: 1rem;
+        padding: 1rem 1rem 0rem 1rem;
         
         @include tablet {
             width: 33%;
@@ -356,7 +359,15 @@ header {
 footer {
     background-color: $color-bandsite-black;
     padding: 1rem;
+    margin-top: 1rem;
     color: $color-white;
+    position: relative;
+    @include tablet {
+        margin-top: 3rem;
+    }
+    @include desktop {
+        margin-top: 2rem;
+    }
 }
 
 .social-section {
@@ -370,7 +381,7 @@ footer {
             font-size: 2.25rem;
             line-height: 2.75rem;
             padding-top: 2rem;
-            margin: 0rem 1rem;
+            margin: 0rem 2rem;
         }
         @include desktop {
             flex-direction: row;
@@ -394,7 +405,7 @@ footer {
         flex-direction: row;
         flex-wrap: wrap;
         margin-top: -3rem;
-        margin-left: -6rem;
+        margin-left: -5rem;
     }
     @include desktop {
         justify-content: center;
@@ -419,9 +430,11 @@ footer {
     margin: 0rem;
     @include tablet {
         flex-direction: row; 
+        padding: 1rem;
     }
     @include desktop {
-        flex-direction: row;    
+        flex-direction: row; 
+        padding: 4rem;   
     }
     &__name {
         @include subheader-mobile-text;
@@ -490,12 +503,16 @@ footer {
         line-height: 4.25rem;
         flex-direction: row;
         margin: -2rem 1rem 0rem 1rem;
-        padding-bottom: 1rem;   
+        padding-bottom: 1rem; 
+        position: absolute;
+        top: 2rem;
+        right: 2rem;  
     }
     @include desktop {
         font-size: 3.75rem;
         line-height: 4.25rem;
         flex-direction: row;
+        right: 6rem;
     }
 }
 
@@ -506,10 +523,12 @@ footer {
     @include tablet {
         font-size: 0.875rem;
         line-height: 1.25rem;
-        margin: 1rem;
+        margin: 1rem 2rem;
     }
     @include desktop {
         font-size: 0.875rem;
         line-height: 1.25rem;
+        padding-left: 3rem;
+        margin-top: -3rem;
     }
 }
