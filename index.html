@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/bio.css">
+    <script src = "./scripts/index-page.js" defer></script>
     <title>Bandsite</title>
 </head>
 <body>
@@ -97,6 +98,22 @@
                 </div>
             </section>
         </section>
+        <section class = "comment-section">
+            <h2 class = "comment-section__title">Join the Conversation</h2>
+            <div class = "user-image">
+                <img class = "user-image__link" src = "" alt ="user profile image"/>
+            </div>
+            <form id="user" action = "" method = "GET">
+                <label for = "fullname">Name</label>
+                <input type = "text" id = "fullname" name = "full_name" placeholder = "Enter your name"><br />
+                <label for = "comment">Comment</label>
+                <textarea type = "text" id = "comment" name = "comments" placeholder="Add a new comment"></textarea><br />
+
+                <button id = "submitButton">COMMENT</button>
+
+            </form>
+        </section>    
+        <section class = "comment-section" id = "comment-section"></section> 
     </main>
     <footer>
         <section class = "social-section">
