@@ -16,55 +16,80 @@ const commentsEntered = [
     },
 ];
 
-const commentsContainer = document.getElementById("comment-section");
+const commentsContainer = document.querySelector(".comment-container");
 
-function createComments(newComments) {
-    container.innerHTMl = null;
-
+/*function createCommentsContainer(commentsArray) {
     for(let i = 0; i < commentsEntered.length; i++) {
-        const fullName = document.createElement("h3");
-        fullName.classList.add("fullname");
-        commentsContainer.appendChild(fullName);
-
-        const dateEntered = document.createElement("div");
-        dateEntered.classList.add("dateEntered");
-        commentsContainer.appendChild(dateEntered);
-
-        const comment = document.createElement("div");
-        comment.classList.add("comment");
-        commentsContainer.appendChild(comment);
+        let listItem = document.createElement("li");
+        listItem.classList.add("comment-container__item");
+        listItem.innerText = commentsArray[i];
         
+        commentsContainer.appendChild(listItem);
     }
 }
-createComments(commentsEntered);
+
+createCommentsContainer(commentsEntered);*/
 
 
-const user = document.querySelector("#user");
+
+//create the array for each item
+
+
+
+function displayComment(data) {
+    let commentCard = document.createElement("div");
+    commentCard.classList.add("comment-card")
+    
+
+    const fullName = document.createElement("h3");
+    fullName.classList.add("fullname");
+    fullName.innerText = data.name;
+    commentCard.appendChild(fullName);
+
+    const dateEntered = document.createElement("div");
+    dateEntered.classList.add("dateEntered");
+    dateEntered.innerText = data.date;
+    commentCard.appendChild(dateEntered);
+
+    const comment = document.createElement("div");
+    comment.classList.add("comment");
+    comment.innerText = data.comment;
+    commentCard.appendChild(comment);
+
+    commentsContainer.appendChild(commentCard);
+}
+
+commentsEntered.forEach((event) => {
+    displayComment(event);
+});
+
+ //form
+const user = document.getElementById("user");
 
 function addNewComment (event) {
-    const newFullName = event.target.newComments.value;
-    const newDateEntered = event.target.newComments.value;
-    const newComment = event.target.newComments.value;
-    let newCommentsObject = {
-        name: newFullName,
-        date: newDateEntered,
-        comment: newComment,
-    };
-    
-    const commentsArray = commentsEntered;
-    commentsArray.unshift(newCommentObject);
 
-    user.reset();   
+    
+ 
 }
 
 //event listener
 user.addEventListener("submit", (event) => {
     event.preventDefault();
-    event.stopPropagation();
-    createComments(addNewComment());
+    const newFullName = event.target.full_name.value;
+    const newDateEntered = new Date().toString();
+    const newComment = event.target.comments.value;
+    commentsContainer.innerText = "";
+    commentsEntered.unshift( {
+        name: newFullName,
+        date: newDateEntered,
+        comment: newComment,
+    });
+    commentsEntered.forEach((event) => {
+        displayComment(event);
+    });
 });
 
-
+//error catch code
 /*const handleSubmit = (event) => {
     console.log(event.target.name.value);
     let fullName = document.getElementById("fullname").value;
