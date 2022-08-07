@@ -1,1 +1,79 @@
-/*# sourceMappingURL=shows.css.map */
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+.hero-section {
+  display: flex;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/images/hero-shows.jpg);
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: center;
+  height: 80vh;
+  color: #FFFFFF;
+  padding: 1rem;
+}
+@media (min-width: 768px) {
+  .hero-section {
+    height: 130vh;
+  }
+}
+@media (min-width: 1200px) {
+  .hero-section {
+    height: 170vh;
+  }
+}
+.hero-section__album {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  margin-top: 1.5rem;
+  margin-bottom: -1rem;
+}
+.hero-section__title {
+  font-size: 2rem;
+  line-height: 3rem;
+  font-weight: 600;
+}
+@media (min-width: 768px) {
+  .hero-section__title {
+    font-size: 4rem;
+    line-height: 2.75rem;
+    font-weight: 600;
+    margin: 0rem 1rem 0rem 1rem;
+  }
+}
+@media (min-width: 1200px) {
+  .hero-section__title {
+    font-size: 4rem;
+    line-height: 2.75rem;
+    font-weight: 600;
+    margin: 2rem 1rem 1rem 6rem;
+  }
+}
+.hero-section__title-two {
+  font-size: 2rem;
+  line-height: 3rem;
+  font-weight: 600;
+  margin-top: -2rem;
+}
+.hero-section__soundcloud-song {
+  width: 100%;
+  height: 30vh;
+  margin: 1rem;
+}/*# sourceMappingURL=shows.css.map */

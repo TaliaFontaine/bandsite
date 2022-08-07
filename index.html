@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/global.css">
     <link rel="stylesheet" href="./styles/bio.css">
     <script src = "./scripts/index-page.js" defer></script>
-    <title>Bandsite</title>
+    <title>Bandsite - Biography</title>
 </head>
 <body>
     <header>
@@ -19,7 +20,7 @@
                     <a class = "navbar__link--active navbar__link" href = "./index.html">Biography</a>
                 </div>
                 <div class = "navbar__second-item">
-                    <a class = "navbar__link" href = "">Shows</a>
+                    <a class = "navbar__link" href = "./pages/shows.html">Shows</a>
                 </div>
             </div>
         </nav>
@@ -100,20 +101,20 @@
         </section>
         <section class = "comment-section">
             <h2 class = "comment-section__title">Join the Conversation</h2>
-            <div class = "user-image">
-                <img class = "user-image__link" src = "" alt ="user profile image"/>
+            <div class = form-section>
+                <div class = "form-section__user-pic">
+                    <img class = "form-section__user-pic__image" src = "./assets/images/Mohan-muruge.jpg">
+                </div>
+                <div class = "form-section__form-container">
+                    <form id="user" action = "" method = "GET">
+                        <label for = "fullname">NAME</label>
+                        <input type = "text" id = "fullname" name = "full_name" placeholder = "Enter your name"><br />
+                        <label for = "comment">COMMENT</label>
+                        <textarea type = "text" id = "comment" name = "comments" placeholder="Add a new comment"></textarea><br />
+                        <button id = "submitButton" type = "submit">COMMENT</button>
+                    </form>
+                </div>
             </div>
-            <form id="user" action = "" method = "GET">
-                <label for = "fullname">Name</label>
-                <input type = "text" id = "fullname" name = "full_name" placeholder = "Enter your name"><br />
-  
-               
-                <label for = "comment">Comment</label>
-                <textarea type = "text" id = "comment" name = "comments" placeholder="Add a new comment"></textarea><br />
-
-                <button id = "submitButton">COMMENT</button>
-
-            </form>
         </section>    
         <section class = "comment-container">
             <!-- this is the comments entered container -->
@@ -142,26 +143,26 @@
                 </div>
             </div>
             <div>
-            <h3 class = "bandsite-agents-info__name">Pearl Gregg</h3>
-            <h3 class = "bandsite-agents-info__title">Limitless Artist Group</h3>
-            <div class = "bandsite-agents-info__address">
-                <p class = "bandsite-agents-info__address__one">Booking Agent for</p>
-                <p class = "bandsite-agents-info__address__two">US/South America/Japan</p>
-            </div>
-            <div class = "bandsite-agents-info__email">
-                <p>pearl.gregg@limitlessag.com</p>
-            </div>
+                <h3 class = "bandsite-agents-info__name">Pearl Gregg</h3>
+                <h3 class = "bandsite-agents-info__title">Limitless Artist Group</h3>
+                <div class = "bandsite-agents-info__address">
+                    <p class = "bandsite-agents-info__address__one">Booking Agent for</p>
+                    <p class = "bandsite-agents-info__address__two">US/South America/Japan</p>
+                </div>
+                <div class = "bandsite-agents-info__email">
+                    <p>pearl.gregg@limitlessag.com</p>
+                </div>
             </div>
             <div>
-            <h3 class = "bandsite-agents-info__name">Carson Whyte</h3>
-            <h3 class = "bandsite-agents-info__title">ARCH Entertainment</h3>
-            <div class = "bandsite-agents-info__address">
-                <p class = "bandsite-agents-info__address__one">Booking Agent for</p>
-                <p class = "bandsite-agents-info__address__two">UK/EU/AU</p>
-            </div>
-            <div class = "bandsite-agents-info__email">
-                <p>cwhyte@archentertainment.com</p>
-            </div>
+                <h3 class = "bandsite-agents-info__name">Carson Whyte</h3>
+                <h3 class = "bandsite-agents-info__title">ARCH Entertainment</h3>
+                <div class = "bandsite-agents-info__address">
+                    <p class = "bandsite-agents-info__address__one">Booking Agent for</p>
+                    <p class = "bandsite-agents-info__address__two">UK/EU/AU</p>
+                </div>
+                <div class = "bandsite-agents-info__email">
+                    <p>cwhyte@archentertainment.com</p>
+                </div>
             </div>
         </section>
         <section class = "bandsite-title">

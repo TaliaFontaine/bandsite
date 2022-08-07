@@ -2,132 +2,6 @@
 @use "./partials/fonts" as *;
 @use "./partials/colors" as *;
 
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'AvenirNext LT Pro';
-    margin: 0;
-}
-
-header {
-    background-color: $color-bandsite-black;
-    background-size: cover;
-    /*border-bottom: 0.0625rem stroke $color-mercury;*/ 
-}
-
-.navbar {
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    flex-direction: column;
-    color: $color-white; 
-    padding-bottom: 0.4rem;
-    @include tablet {
-        flex-direction: row;
-        justify-content: left;
-        align-items: center;
-        margin: 0rem 1rem 0rem 2rem;
-        padding-bottom: 1.2rem;
-    }
-    @include desktop {
-        flex-direction: row;
-        justify-content: left;
-        align-items: center;
-        margin: 0rem 1rem 0rem 6rem;
-    }
-    &__title-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        padding: 2rem 0rem 2rem 0rem;
-        @include page-header-mobile-logo;
-        @include tablet {
-            font-size: 3.75rem;
-            line-height: 4.25rem;
-            flex-direction: row;
-            width: 20%;
-            margin-right: 0.5rem;
-            padding-bottom: 1rem;
-        }
-        @include desktop {
-            font-size: 3.75rem;
-            line-height: 4.25rem;
-            flex-direction: row;
-            width: 20%;
-            margin-right: -10rem;
-        }
-    }
-    &__list {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        list-style: none;
-        width: 100%;
-        font-size: 0.75rem;
-        font-weight: 600;
-        max-height: 1.375rem;
-        @include tablet {
-            font-size: 1rem;
-            max-height: 2rem;
-            flex-direction: row;
-            width: 80%;
-            padding-top: 3rem;
-            margin-left: -8rem;
-        }
-        @include desktop {
-            font-size: 0.75rem;
-            max-height: 2rem;
-            flex-direction: row;
-            width: 80%;
-        } 
-    }
-    &__item {
-        width: 50%;
-        text-align: center;    
-    }
-    &__second-item {
-        width: 50%;
-        text-align: center;
-        @include tablet {
-            margin-left: -11rem;
-        }
-        @include desktop {
-            margin-left: -22rem;
-            padding-bottom: 0.5rem;
-        }
-    }
-    &__link {
-        display: inline-block;
-        color: $color-silver;
-        text-decoration: none;
-        width: 100%;
-        padding-bottom: 1rem;
-        &--active {
-            border-bottom: 4px solid $color-white;
-            color: $color-white;
-            margin: 0rem;
-            width: 100%;
-            @include tablet {
-                padding-bottom: 1rem;
-                width: 28%;   
-            }
-            @include desktop {
-                border-bottom: 2px solid $color-white;
-                padding-bottom: 1.4rem;
-                width: 15%;
-            }
-        }
-        &:hover {
-            @extend .navbar__link--active;
-            color: $color-bandsite-dark-black;
-            transition: 0.4s;
-        }
-    }
-}
-
 .hero-section {
     display: flex;
     background-image: linear-gradient(rgba($color-bandsite-dark-black, 0.5), rgba($color-bandsite-dark-black, 0.5)), url(../assets/images/hero-bio.jpg);
@@ -256,8 +130,7 @@ header {
 .paragraph-section {
     display: flex;
     flex-direction: column;
-    margin: 0rem 0rem;
-    /*justify-content: center;*/
+    margin: 0rem;
     align-items: center;
     @include tablet {
         flex-direction: row;
@@ -297,7 +170,6 @@ header {
         }
     }
 }
-
 
 .photo-gallery-section {
     background-color: $color-alabaster;
@@ -356,179 +228,93 @@ header {
     }
 }
 
-footer {
-    background-color: $color-bandsite-black;
-    padding: 1rem;
-    margin-top: 1rem;
-    color: $color-white;
-    position: relative;
-    @include tablet {
-        margin-top: 3rem;
-    }
-    @include desktop {
-        margin-top: 2rem;
-    }
-}
-
-.social-section {
-    display: flex;
+.comment-section {
+    color: $color-bandsite-black;
     &__title {
         font-size: 1.5rem;
         line-height: 2rem;
         font-weight: 600;
-        @include tablet {
-            flex-direction: row;
-            font-size: 2.25rem;
-            line-height: 2.75rem;
-            padding-top: 2rem;
-            margin: 0rem 2rem;
-        }
-        @include desktop {
-            flex-direction: row;
-            font-size: 2.25rem;
-            line-height: 2.75rem;
-            margin: 0rem 5rem;
-        }
+        padding-top: 1rem;
     }
 }
 
-.social-links {
+.form-section {
     display: flex;
-    padding: 0rem;
-    margin-left: -1rem;
-    justify-content: left;
-    align-items: center;
     flex-direction: row;
-    @include tablet {
-        justify-content: center;
-        align-items:center;
-        flex-direction: row;
-        flex-wrap: wrap;
-        margin-top: -3rem;
-        margin-left: -5rem;
+    width: 100%;
+    &__user-pic {
+        display: flex;
+        align-items: flex-start;
+        justify-content: left;
+        width: 20%;
+        padding-top: 1rem;  
     }
-    @include desktop {
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
-        flex-wrap: wrap;
-        margin-top: -3rem;
-        margin-left: -25rem;
+    &__user-pic__image {
+
+        border-radius: 50%;
+        width: 3.5rem;
+        height: 3.5rem;
     }
-    &__image{
-        flex-direction: row;
-        padding: 1rem;
-        flex-grow: 2;
+    &__form-container {
+        display: flex;
+        justify-content: right;
+        width: 80%;
+        margin-left: 1rem;
     }
 }
 
-.bandsite-agents-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 0rem;
-    @include tablet {
-        flex-direction: row; 
-        padding: 1rem;
-    }
-    @include desktop {
-        flex-direction: row; 
-        padding: 4rem;   
-    }
-    &__name {
-        @include subheader-mobile-text;
-        flex-direction: row;
-        margin: 1rem 1rem -1rem 0rem;
-    }
-    @include tablet {
-        flex-direction: row;
-        font-size: 1.5rem;
-        line-height: 2rem;
-        padding-top: 0rem;
-        margin: 0rem 1rem;
-    }
-    @include desktop {
-        flex-direction: row;
-        font-size: 1.5rem;
-        line-height: 2rem;
-        padding-top: 0rem;
-        margin: 0rem 1rem;
-    }
-    &__title {
-        flex-direction: row;
-        @include subheader-mobile-text;
-    }
-    @include tablet {
-        flex-direction: row;
-        font-size: 1.5rem;
-        line-height: 2rem;
-        padding-top: 0rem;
-        margin: 0rem 1rem;
-    }
-    @include desktop {
-        flex-direction: row;
-        font-size: 1.5rem;
-        line-height: 2rem;
-        padding-top: 0rem;
-        margin: 0rem 1rem;
-    }
-    &__address {
-        flex-direction: row;
-        @include subheader-mobile-reguler-weight;
-    }
-    @include tablet {
-        flex-direction: row;
-    }
-    @include desktop {
-        flex-direction: row;
-    }
-    &__address__two {
-        margin-top: -1rem;
-    }
-    &__email {
-        flex-direction: row;
-        @include subheader-mobile-reguler-weight;
-    }
+label {
+    color: $color-silver;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0.25rem 0rem;
 }
 
-.bandsite-title {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    padding: 4rem 0rem 1rem 0rem;
-    @include page-header-mobile-logo;
-    @include tablet {
-        font-size: 3.75rem;
-        line-height: 4.25rem;
-        flex-direction: row;
-        margin: -2rem 1rem 0rem 1rem;
-        padding-bottom: 1rem; 
-        position: absolute;
-        top: 2rem;
-        right: 2rem;  
-    }
-    @include desktop {
-        font-size: 3.75rem;
-        line-height: 4.25rem;
-        flex-direction: row;
-        right: 6rem;
-    }
+input {
+    background-color: $color-alabaster;
+    height: 3rem;
+    width: 100%;
+    border: 1px solid $color-mercury;
+    border-radius: 0.25rem;
+    margin-bottom: 1.5rem;
 }
 
-.copyright-section {
-    font-size: 0.8125rem;
-    line-height: 1.125rem;
+input::placeholder {
+    color: $color-bandsite-black;
+    font-size: 1rem;
     font-weight: 400;
-    @include tablet {
-        font-size: 0.875rem;
-        line-height: 1.25rem;
-        margin: 1rem 2rem;
-    }
-    @include desktop {
-        font-size: 0.875rem;
-        line-height: 1.25rem;
-        padding-left: 3rem;
-        margin-top: -3rem;
-    }
+    padding: 0.75rem;
+    font-weight: 400;
+    font-family: 'AvenirNext LT Pro';
+}
+
+textarea {
+    background-color: $color-alabaster;
+    height: 6rem;
+    width: 100%;
+    border: 1px solid $color-mercury;
+    border-radius: 0.25rem;
+    margin: 0.5rem 0rem 1rem 0rem;
+}
+
+textarea::placeholder {
+    color: $color-bandsite-black;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 0.75rem;
+    font-weight: 400;
+    font-family: 'AvenirNext LT Pro';
+}
+
+button {
+    background-color: $color-bandsite-black;
+    color: $color-white;
+    border-radius: 0.25rem;;
+    height: 2.5rem;
+    width: 100%;
+}
+
+button:hover {
+    background-color: $color-bandsite-dark-black;
+    color: $color-white;
 }

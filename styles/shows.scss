@@ -1,0 +1,58 @@
+@use "./partials/mixins" as *;
+@use "./partials/fonts" as *;
+@use "./partials/colors" as *;
+
+.hero-section {
+    display: flex;
+    background-image: linear-gradient(rgba($color-bandsite-dark-black, 0.5), rgba($color-bandsite-dark-black, 0.5)), url(../assets/images/hero-shows.jpg);
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    height: 80vh;
+    color: $color-white;
+    padding: 1rem;
+    @include tablet {
+        height: 130vh;
+    }
+    @include desktop {
+        height: 170vh;
+    }
+    &__album {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        font-weight: 500;
+        margin-top: 1.5rem;
+        margin-bottom: -1rem;
+    }
+    &__title {
+        font-size: 2rem;
+        line-height: 3rem; 
+        font-weight: 600;
+        @include tablet {
+            font-size: 4rem;
+            line-height: 2.75rem;
+            font-weight: 600;
+            margin: 0rem 1rem 0rem 1rem;
+        }
+        @include desktop {
+            font-size: 4rem;
+            line-height: 2.75rem;
+            font-weight: 600;
+            margin: 2rem 1rem 1rem 6rem;
+        }
+    }
+    &__title-two {
+        font-size: 2rem;
+        line-height: 3rem; 
+        font-weight: 600;
+        margin-top: -2rem;
+    }
+    &__soundcloud-song {
+        width: 100%; 
+        height: 30vh;
+        margin: 1rem;
+    }
+    
+}

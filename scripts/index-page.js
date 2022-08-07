@@ -18,23 +18,7 @@ const commentsEntered = [
 
 const commentsContainer = document.querySelector(".comment-container");
 
-/*function createCommentsContainer(commentsArray) {
-    for(let i = 0; i < commentsEntered.length; i++) {
-        let listItem = document.createElement("li");
-        listItem.classList.add("comment-container__item");
-        listItem.innerText = commentsArray[i];
-        
-        commentsContainer.appendChild(listItem);
-    }
-}
-
-createCommentsContainer(commentsEntered);*/
-
-
-
 //create the array for each item
-
-
 
 function displayComment(data) {
     let commentCard = document.createElement("div");
@@ -66,20 +50,14 @@ commentsEntered.forEach((event) => {
  //form
 const user = document.getElementById("user");
 
-function addNewComment (event) {
-
-    
- 
-}
-
 //event listener
 user.addEventListener("submit", (event) => {
     event.preventDefault();
     const newFullName = event.target.full_name.value;
-    const newDateEntered = new Date().toString();
+    const newDateEntered = dateEntered;
     const newComment = event.target.comments.value;
     commentsContainer.innerText = "";
-    commentsEntered.unshift( {
+    commentsEntered.unshift({
         name: newFullName,
         date: newDateEntered,
         comment: newComment,
@@ -87,18 +65,24 @@ user.addEventListener("submit", (event) => {
     commentsEntered.forEach((event) => {
         displayComment(event);
     });
+    user.reset();
 });
 
-//error catch code
-/*const handleSubmit = (event) => {
-    console.log(event.target.name.value);
-    let fullName = document.getElementById("fullname").value;
-    document.getElementById("comment").value;
-    if(fullName==="") {
-        alert("Enter your full name");
-    } else {
-        console.log(fullName);
-    }
+//date comment entered code
+let currentDate = new Date();
+let dd = currentDate.getDate();
+let mm = currentDate.getMonth()+1;
+let yyyy = currentDate.getFullYear(); 
+let dateEntered = dd + "/" + mm + "/" + yyyy;
 
-    
+
+//error catch code
+/*const checkNewFullName = (event) => {
+    if(newFullName === "") {
+        alert("Must enter your name");
+    } else if (newFullName <10) {
+        alert("Must enter your first and last name");
+    } else {
+        console.log("This full name is valid");
+    }
 }*/
