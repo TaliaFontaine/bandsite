@@ -18,13 +18,11 @@ const commentsEntered = [
 
 const commentsContainer = document.querySelector(".comment-entered-section");
 
-
-
 //create the array for each item
 
 function displayComment(data) {
     let commentCard = document.createElement("div");
-    commentCard.classList.add("comment-card")
+    commentCard.classList.add("comment-card");
     
     const userPic = document.createElement("div");
     userPic.classList.add("user-profile-pic");
