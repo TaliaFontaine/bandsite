@@ -307,6 +307,7 @@
   display: flex;
   flex-direction: row;
   width: 100%;
+  margin-bottom: 1rem;
 }
 .form-section__user-pic {
   display: flex;
@@ -409,6 +410,7 @@ textarea::placeholder {
 button {
   background-color: #323232;
   color: #FFFFFF;
+  font-weight: 600;
   border-radius: 0.25rem;
   height: 2.5rem;
   width: 100%;
@@ -417,4 +419,55 @@ button {
 button:hover {
   background-color: #000000;
   color: #FFFFFF;
+}
+
+.comment-entered-section {
+  position: relative;
+  border-top: 1px solid #E1E1E1;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.user-profile-pic {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: left;
+  width: 20%;
+  padding-top: 1rem;
+}
+.user-profile-pic__circle {
+  background-color: #E1E1E1;
+  border-radius: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.comment-card {
+  display: flex;
+  border-bottom: 1px solid #E1E1E1;
+  position: relative;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: right;
+  align-items: flex-start;
+  width: 80%;
+  margin: 1rem;
+}
+
+.fullname {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.dateEntered {
+  color: #AFAFAF;
+  position: absolute;
+  top: -2rem;
+  right: 1rem;
+}
+
+.comment {
+  font-size: 1rem;
 }/*# sourceMappingURL=bio.css.map */

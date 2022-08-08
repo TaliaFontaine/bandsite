@@ -242,6 +242,7 @@
     display: flex;
     flex-direction: row;
     width: 100%;
+    margin-bottom: 1rem;
     &__user-pic {
         display: flex;
         align-items: flex-start;
@@ -250,7 +251,6 @@
         padding-top: 1rem;  
     }
     &__user-pic__image {
-
         border-radius: 50%;
         width: 3.5rem;
         height: 3.5rem;
@@ -309,6 +309,7 @@ textarea::placeholder {
 button {
     background-color: $color-bandsite-black;
     color: $color-white;
+    font-weight: 600;
     border-radius: 0.25rem;;
     height: 2.5rem;
     width: 100%;
@@ -318,3 +319,57 @@ button:hover {
     background-color: $color-bandsite-dark-black;
     color: $color-white;
 }
+
+.comment-entered-section {
+   
+    position: relative;
+    border-top: 1px solid $color-mercury;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.user-profile-pic {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: left;
+        width: 20%;
+        padding-top: 1rem; 
+    
+    &__circle {
+        background-color: $color-mercury;
+        border-radius: 50%;
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+}
+
+.comment-card {
+    display: flex;
+    border-bottom: 1px solid $color-mercury;  
+    position: relative;
+    flex-wrap: wrap;  
+    flex-direction: row;
+    justify-content: right;
+    align-items: flex-start;
+    width: 80%;
+    margin: 1rem;
+    
+}
+.fullname {
+    
+    font-size: 1rem; 
+    font-weight: 600;
+    
+}
+.dateEntered {
+    color: $color-silver;
+    position: absolute;
+    top: -2rem;
+    right: 1rem;
+}
+.comment {
+    font-size: 1rem;
+}
+

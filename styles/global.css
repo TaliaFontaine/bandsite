@@ -84,7 +84,7 @@ header {
     line-height: 4.25rem;
     flex-direction: row;
     width: 20%;
-    margin-right: -1rem;
+    margin-right: -10rem;
   }
 }
 .navbar__list {
@@ -104,7 +104,7 @@ header {
     flex-direction: row;
     width: 80%;
     padding-top: 3rem;
-    margin-left: -1rem;
+    margin-left: -8rem;
   }
 }
 @media (min-width: 1200px) {
@@ -125,12 +125,12 @@ header {
 }
 @media (min-width: 768px) {
   .navbar__second-item {
-    margin-left: -1rem;
+    margin-left: -11rem;
   }
 }
 @media (min-width: 1200px) {
   .navbar__second-item {
-    margin-left: -1rem;
+    margin-left: -22rem;
     padding-bottom: 0.5rem;
   }
 }

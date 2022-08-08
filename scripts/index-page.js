@@ -16,7 +16,9 @@ const commentsEntered = [
     },
 ];
 
-const commentsContainer = document.querySelector(".comment-container");
+const commentsContainer = document.querySelector(".comment-entered-section");
+
+
 
 //create the array for each item
 
@@ -24,6 +26,13 @@ function displayComment(data) {
     let commentCard = document.createElement("div");
     commentCard.classList.add("comment-card")
     
+    const userPic = document.createElement("div");
+    userPic.classList.add("user-profile-pic");
+    commentsContainer.appendChild(userPic);
+
+    const userCircle = document.createElement("div");
+    userCircle.classList.add("user-profile-pic__circle");
+    userPic.appendChild(userCircle);
 
     const fullName = document.createElement("h3");
     fullName.classList.add("fullname");
