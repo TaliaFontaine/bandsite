@@ -45,6 +45,20 @@
   margin-top: 1.5rem;
   margin-bottom: -1rem;
 }
+@media (min-width: 768px) {
+  .hero-section__album {
+    padding-left: 1rem;
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 600;
+    margin-bottom: -2rem;
+  }
+}
+@media (min-width: 1200px) {
+  .hero-section__album {
+    justify-content: left;
+  }
+}
 .hero-section__title {
   font-size: 2rem;
   line-height: 3rem;
@@ -63,7 +77,7 @@
     font-size: 4rem;
     line-height: 2.75rem;
     font-weight: 600;
-    margin: 2rem 1rem 1rem 6rem;
+    justify-content: left;
   }
 }
 .hero-section__title-two {
@@ -72,10 +86,39 @@
   font-weight: 600;
   margin-top: -2rem;
 }
+@media (min-width: 768px) {
+  .hero-section__title-two {
+    font-size: 4rem;
+    line-height: 2.75rem;
+    font-weight: 600;
+    margin: 0rem 1rem 0rem 1rem;
+  }
+}
+@media (min-width: 1200px) {
+  .hero-section__title-two {
+    font-size: 4rem;
+    line-height: 2.75rem;
+    font-weight: 600;
+    justify-content: left;
+  }
+}
 .hero-section__soundcloud-song {
   width: 100%;
   height: 30vh;
   margin: 1rem;
+}
+@media (min-width: 768px) {
+  .hero-section__soundcloud-song {
+    margin: 2rem;
+    justify-content: center;
+    width: 100%;
+    height: 40vh;
+  }
+}
+@media (min-width: 1200px) {
+  .hero-section__soundcloud-song {
+    justify-content: right;
+  }
 }
 
 .buy-tickets-section {
@@ -94,6 +137,7 @@
     line-height: 2.75rem;
     font-weight: 600;
     padding-top: 3rem;
+    padding-left: 1rem;
   }
 }
 @media (min-width: 1200px) {
@@ -102,6 +146,7 @@
     line-height: 2.75rem;
     font-weight: 600;
     padding-top: 3rem;
+    padding-left: 6rem;
   }
 }
 
@@ -115,6 +160,19 @@
   border-bottom: 1px solid #E1E1E1;
   flex-direction: column;
   padding-bottom: 4rem;
+}
+.shows-card :hover {
+  background-color: #FAFAFA;
+}
+@media (min-width: 768px) {
+  .shows-card {
+    flex-direction: row;
+  }
+}
+@media (min-width: 1200px) {
+  .shows-card {
+    flex-direction: row;
+  }
 }
 
 .date-label {

@@ -175,6 +175,7 @@
     background-color: $color-alabaster;
     background-size: cover;
     margin: -1rem;
+    padding-bottom: 2rem;
 }
 
 .photo-title {
@@ -236,30 +237,76 @@
         font-weight: 600;
         padding-top: 1rem;
     }
+    @include tablet {
+        font-size: 2.25rem;
+        line-height: 2.75rem;
+        font-weight: 600;
+        padding-top: 2rem;
+        margin: 0rem 2rem 1rem 1rem;
+    }
+    @include desktop {
+        font-size: 2.25rem;
+        line-height: 2.75rem;
+        font-weight: 600;
+        padding-top: 3rem;
+        margin: 1rem 1rem 1rem 5rem;
+    } 
 }
 
 .form-section {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     width: 100%;
     margin-bottom: 1rem;
+    @include tablet {
+        justify-content: left;
+        margin: 1rem 2rem;
+    }
+    @include desktop {
+        justify-content: center;
+        margin: 1rem 10rem;
+    }
     &__user-pic {
         display: flex;
         align-items: flex-start;
         justify-content: left;
         width: 20%;
         padding-top: 1rem;  
+        @include tablet {
+            
+            width: 10%;
+            padding-top: 1rem;
+        }
+        @include desktop {
+            padding-top: 1rem;
+            width: 10%;
+
+        }
     }
     &__user-pic__image {
         border-radius: 50%;
-        width: 3.5rem;
-        height: 3.5rem;
+        width: 2.25rem;
+        height: 2.25rem;
+        @include tablet {
+            width: 3rem;
+            height: 3rem;
+        }
+        @include desktop {
+            width: 3rem;
+            height: 3rem;
+        }
     }
     &__form-container {
         display: flex;
         justify-content: right;
         width: 80%;
         margin-left: 1rem;
+        @include tablet {
+            justify-content: left;
+            width: 90%;
+            
+        }
     }
 }
 
@@ -277,6 +324,10 @@ input {
     border: 1px solid $color-mercury;
     border-radius: 0.25rem;
     margin-bottom: 1.5rem;
+    @include tablet {
+        height: 3rem;
+        width: 100%;
+    }
 }
 
 input::placeholder {
@@ -321,55 +372,81 @@ button:hover {
 }
 
 .comment-entered-section {
-   
-    position: relative;
+    display: flex;
     border-top: 1px solid $color-mercury;
     flex-direction: column;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     width: 100%;
-}
-
-.user-profile-pic {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: left;
-        width: 20%;
-        padding-top: 1rem; 
-    
-    &__circle {
-        background-color: $color-mercury;
-        border-radius: 50%;
-        width: 3.5rem;
-        height: 3.5rem;
+    @include tablet {
+        padding: 1rem 3rem;
+    }
+    @include desktop {
+        justify-content: center;
+        padding: 0rem 15rem;
     }
 }
 
 .comment-card {
-    display: flex;
-    border-bottom: 1px solid $color-mercury;  
-    position: relative;
-    flex-wrap: wrap;  
-    flex-direction: row;
-    justify-content: right;
-    align-items: flex-start;
-    width: 80%;
-    margin: 1rem;
-    
-}
-.fullname {
-    
-    font-size: 1rem; 
-    font-weight: 600;
-    
-}
-.dateEntered {
-    color: $color-silver;
-    position: absolute;
-    top: -2rem;
-    right: 1rem;
-}
-.comment {
-    font-size: 1rem;
+        display: flex;
+        border-bottom: 1px solid $color-mercury;  
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: right;
+        align-items: center;
+        width: 100%;
+        padding-bottom: 1rem;
+        padding-top: 1rem; 
+
+    &__user-profile {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: left;
+        width: 20%;
+        height: 100%;
+    }
+    &__user-profile__circle {
+        background-color: $color-mercury;
+        border-radius: 50%;
+        width: 2.25rem;
+        height: 2.25rem;
+        @include tablet {
+            width: 3rem;
+            height: 3rem;
+        }
+        @include desktop {
+            width: 3rem;
+            height: 3rem;
+        }
+    }
+    &__top-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 80%;
+        height: 20%;  
+    }
+    &__top-container__fullname {
+        justify-content: left;
+        align-items: center;
+        font-size: 1rem; 
+        font-weight: 600;   
+    }
+    &__top-container__dateEntered {
+        color: $color-silver;
+        font-size: 1rem;
+        justify-content: right;
+        align-items: center;   
+    }
+    &__comment {
+        flex-direction: row;
+        justify-content: right;
+        align-items: center;
+        font-size: 1rem;
+        width: 80%;
+        height: 80%; 
+        padding-left: 0rem;  
+    }
 }
 

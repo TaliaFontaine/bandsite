@@ -25,25 +25,29 @@ function displayComment(data) {
     commentCard.classList.add("comment-card");
     
     const userPic = document.createElement("div");
-    userPic.classList.add("user-profile-pic");
-    commentsContainer.appendChild(userPic);
+    userPic.classList.add("comment-card__user-profile");
+    commentCard.appendChild(userPic);
 
     const userCircle = document.createElement("div");
-    userCircle.classList.add("user-profile-pic__circle");
+    userCircle.classList.add("comment-card__user-profile__circle");
     userPic.appendChild(userCircle);
 
+    const topContainer = document.createElement("div");
+    topContainer.classList.add("comment-card__top-container");
+    commentCard.appendChild(topContainer);
+
     const fullName = document.createElement("h3");
-    fullName.classList.add("fullname");
+    fullName.classList.add("comment-card__top-container__fullname");
     fullName.innerText = data.name;
-    commentCard.appendChild(fullName);
+    topContainer.appendChild(fullName);
 
     const dateEntered = document.createElement("div");
-    dateEntered.classList.add("dateEntered");
+    dateEntered.classList.add("comment-card__top-container__dateEntered");
     dateEntered.innerText = data.date;
-    commentCard.appendChild(dateEntered);
+    topContainer.appendChild(dateEntered);
 
     const comment = document.createElement("div");
-    comment.classList.add("comment");
+    comment.classList.add("comment-card__comment");
     comment.innerText = data.comment;
     commentCard.appendChild(comment);
 
@@ -81,7 +85,6 @@ let dd = currentDate.getDate();
 let mm = currentDate.getMonth()+1;
 let yyyy = currentDate.getFullYear(); 
 let dateEntered = dd + "/" + mm + "/" + yyyy;
-
 
 //error catch code
 /*const checkNewFullName = (event) => {
