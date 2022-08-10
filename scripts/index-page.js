@@ -1,62 +1,59 @@
-const commentsEntered = [
-    {
-    name: "Conner Walton",
-    date: "02/17/2021",
-    comment: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-    },
-    {
-    name: "Emilie Beach",
-    date: "01/09/2021",
-    comment: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-    },
-    {
-    name: "Miles Acosta",
-    date: "12/20/2020",
-    comment: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-    },
-];
-
 const commentsContainer = document.querySelector(".comment-entered-section");
+const commentsURL = "https://project-1-api.herokuapp.com/comments?api_key=b5af0f5b-bb6b-46ac-9cf2-1e9701b06b8b";
 
-//create the array for each item
 
-function displayComment(data) {
-    let commentCard = document.createElement("div");
-    commentCard.classList.add("comment-card");
+const commentsEntered = [];
+
+const displayComment = () => {
+    commentsContainer.innerHTML = "";
+
+    commentsEntered.forEach((data) => {
+        let commentCard = document.createElement("div");
+        commentCard.classList.add("comment-card");
     
-    const userPic = document.createElement("div");
-    userPic.classList.add("comment-card__user-profile");
-    commentCard.appendChild(userPic);
+        const userPic = document.createElement("div");
+        userPic.classList.add("comment-card__user-profile");
+        commentCard.appendChild(userPic);
 
-    const userCircle = document.createElement("div");
-    userCircle.classList.add("comment-card__user-profile__circle");
-    userPic.appendChild(userCircle);
+        const userCircle = document.createElement("div");
+        userCircle.classList.add("comment-card__user-profile__circle");
+        userPic.appendChild(userCircle);
 
-    const topContainer = document.createElement("div");
-    topContainer.classList.add("comment-card__top-container");
-    commentCard.appendChild(topContainer);
+        const topContainer = document.createElement("div");
+        topContainer.classList.add("comment-card__top-container");
+        commentCard.appendChild(topContainer);
 
-    const fullName = document.createElement("h3");
-    fullName.classList.add("comment-card__top-container__fullname");
-    fullName.innerText = data.name;
-    topContainer.appendChild(fullName);
+        const fullName = document.createElement("h3");
+        fullName.classList.add("comment-card__top-container__fullname");
+        fullName.innerText = data.name;
+        topContainer.appendChild(fullName);
 
-    const dateEntered = document.createElement("div");
-    dateEntered.classList.add("comment-card__top-container__dateEntered");
-    dateEntered.innerText = data.date;
-    topContainer.appendChild(dateEntered);
+        //timestamp to date code ECMAScript Date object
+        //let dateStamp = new Date(data.timestamp)
+        const dateEntered = document.createElement("div");
+        dateEntered.classList.add("comment-card__top-container__dateEntered");
+        dateEntered.innerText = data.timestamp;
+        topContainer.appendChild(dateEntered);
 
-    const comment = document.createElement("div");
-    comment.classList.add("comment-card__comment");
-    comment.innerText = data.comment;
-    commentCard.appendChild(comment);
+        const comment = document.createElement("div");
+        comment.classList.add("comment-card__comment");
+        comment.innerText = data.comment;
+        commentCard.appendChild(comment);
 
-    commentsContainer.appendChild(commentCard);
-}
+        commentsContainer.appendChild(commentCard);
+    });
+};
 
-commentsEntered.forEach((event) => {
-    displayComment(event);
+axios.get(commentsURL).then((response) => {
+    console.log(response.data);
+    //.catch(error => console.log(error))
+
+    displayComment(); 
 });
+
+/*commentsEntered.forEach((event) => {
+    displayComment(event);
+});*/
 
  //form
 const user = document.getElementById("user");

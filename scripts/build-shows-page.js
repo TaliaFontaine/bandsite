@@ -33,11 +33,6 @@ const shows = [
 
 const buyTicketsSection = document.querySelector(".buy-tickets-section");
 
-/*const showTitle = document.createElement("h2");
-showTitle.classList.add("show-title");
-showTitle.textContent = "Shows";
-buyTicketsSection.appendChild(showTitle);*/
-
 //create the array for each item with labels
 
 function displayShows(data) {
