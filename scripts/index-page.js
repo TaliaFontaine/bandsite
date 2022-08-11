@@ -1,10 +1,17 @@
 const commentsContainer = document.querySelector(".comment-entered-section");
 const commentsURL = "https://project-1-api.herokuapp.com/comments?api_key=b5af0f5b-bb6b-46ac-9cf2-1e9701b06b8b";
 
+const dateFormat = (timestamp) => {
+    console.log(timestamp);
+let currentDate = new Date(timestamp);
+let dd = currentDate.getDate();
+let mm = currentDate.getMonth()+1;
+let yyyy = currentDate.getFullYear(); 
+let dateEntered = dd + "/" + mm + "/" + yyyy;
+return dateEntered;
+}
 
-const commentsEntered = [];
-
-const displayComment = () => {
+const displayComment = (commentsEntered) => {
     commentsContainer.innerHTML = "";
 
     commentsEntered.forEach((data) => {
@@ -30,9 +37,10 @@ const displayComment = () => {
 
         //timestamp to date code ECMAScript Date object
         //let dateStamp = new Date(data.timestamp)
+
         const dateEntered = document.createElement("div");
         dateEntered.classList.add("comment-card__top-container__dateEntered");
-        dateEntered.innerText = data.timestamp;
+        dateEntered.innerText = dateFormat(data.timestamp);
         topContainer.appendChild(dateEntered);
 
         const comment = document.createElement("div");
@@ -48,12 +56,23 @@ axios.get(commentsURL).then((response) => {
     console.log(response.data);
     //.catch(error => console.log(error))
 
-    displayComment(); 
+    displayComment(response.data); 
 });
 
 /*commentsEntered.forEach((event) => {
     displayComment(event);
 });*/
+
+/*axios.post('/user', {
+    firstName: 'Fred',
+    lastName: 'Flintstone'
+  })
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });*/
 
  //form
 const user = document.getElementById("user");
