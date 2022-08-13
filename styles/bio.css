@@ -377,27 +377,22 @@
     height: 3rem;
   }
 }
-.form-section__form-container {
+.form-section__container {
   display: flex;
   justify-content: right;
   width: 80%;
   margin-left: 1rem;
 }
 @media (min-width: 768px) {
-  .form-section__form-container {
+  .form-section__container {
     justify-content: left;
     width: 90%;
   }
 }
-
-label {
-  color: #AFAFAF;
-  font-size: 0.9rem;
-  font-weight: 600;
-  margin: 0.25rem 0rem;
+.form-section__container__user {
+  width: 100%;
 }
-
-input {
+.form-section__container__fullname {
   background-color: #FAFAFA;
   height: 3rem;
   width: 100%;
@@ -406,13 +401,12 @@ input {
   margin-bottom: 1.5rem;
 }
 @media (min-width: 768px) {
-  input {
+  .form-section__container__fullname {
     height: 3rem;
     width: 100%;
   }
 }
-
-input::-moz-placeholder {
+.form-section__container__fullname::-moz-placeholder {
   color: #323232;
   font-size: 1rem;
   font-weight: 400;
@@ -420,8 +414,7 @@ input::-moz-placeholder {
   font-weight: 400;
   font-family: "AvenirNext LT Pro";
 }
-
-input:-ms-input-placeholder {
+.form-section__container__fullname:-ms-input-placeholder {
   color: #323232;
   font-size: 1rem;
   font-weight: 400;
@@ -429,8 +422,7 @@ input:-ms-input-placeholder {
   font-weight: 400;
   font-family: "AvenirNext LT Pro";
 }
-
-input::placeholder {
+.form-section__container__fullname::placeholder {
   color: #323232;
   font-size: 1rem;
   font-weight: 400;
@@ -438,8 +430,7 @@ input::placeholder {
   font-weight: 400;
   font-family: "AvenirNext LT Pro";
 }
-
-textarea {
+.form-section__container__comment {
   background-color: #FAFAFA;
   height: 6rem;
   width: 100%;
@@ -447,8 +438,7 @@ textarea {
   border-radius: 0.25rem;
   margin: 0.5rem 0rem 1rem 0rem;
 }
-
-textarea::-moz-placeholder {
+.form-section__container__comment::-moz-placeholder {
   color: #323232;
   font-size: 1rem;
   font-weight: 400;
@@ -456,8 +446,7 @@ textarea::-moz-placeholder {
   font-weight: 400;
   font-family: "AvenirNext LT Pro";
 }
-
-textarea:-ms-input-placeholder {
+.form-section__container__comment:-ms-input-placeholder {
   color: #323232;
   font-size: 1rem;
   font-weight: 400;
@@ -465,8 +454,7 @@ textarea:-ms-input-placeholder {
   font-weight: 400;
   font-family: "AvenirNext LT Pro";
 }
-
-textarea::placeholder {
+.form-section__container__comment::placeholder {
   color: #323232;
   font-size: 1rem;
   font-weight: 400;
@@ -474,8 +462,7 @@ textarea::placeholder {
   font-weight: 400;
   font-family: "AvenirNext LT Pro";
 }
-
-button {
+.form-section__container__submitButton {
   background-color: #323232;
   color: #FFFFFF;
   font-weight: 600;
@@ -483,12 +470,75 @@ button {
   height: 2.5rem;
   width: 100%;
 }
-
-button:hover {
+.form-section__container__submit:hover {
   background-color: #000000;
   color: #FFFFFF;
 }
 
+/*form {
+    width: 100%;
+}*/
+label {
+  color: #AFAFAF;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0.25rem 0rem;
+}
+
+/*
+input {
+    background-color: $color-alabaster;
+    height: 3rem;
+    width: 100%;
+    border: 1px solid $color-mercury;
+    border-radius: 0.25rem;
+    margin-bottom: 1.5rem;
+    @include tablet {
+        height: 3rem;
+        width: 100%;
+    }
+}
+
+input::placeholder {
+    color: $color-bandsite-black;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 0.75rem;
+    font-weight: 400;
+    font-family: 'AvenirNext LT Pro';
+}
+
+textarea {
+    background-color: $color-alabaster;
+    height: 6rem;
+    width: 100%;
+    border: 1px solid $color-mercury;
+    border-radius: 0.25rem;
+    margin: 0.5rem 0rem 1rem 0rem;
+}
+
+textarea::placeholder {
+    color: $color-bandsite-black;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 0.75rem;
+    font-weight: 400;
+    font-family: 'AvenirNext LT Pro';
+}
+
+button {
+    background-color: $color-bandsite-black;
+    color: $color-white;
+    font-weight: 600;
+    border-radius: 0.25rem;;
+    height: 2.5rem;
+    width: 100%;
+}
+
+button:hover {
+    background-color: $color-bandsite-dark-black;
+    color: $color-white;
+}*/
 .comment-entered-section {
   display: flex;
   border-top: 1px solid #E1E1E1;

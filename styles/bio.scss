@@ -297,18 +297,72 @@
             height: 3rem;
         }
     }
-    &__form-container {
+    &__container {
         display: flex;
         justify-content: right;
         width: 80%;
         margin-left: 1rem;
         @include tablet {
             justify-content: left;
-            width: 90%;
-            
+            width: 90%;  
+        }
+        &__user {
+            width: 100%;
+        }
+        &__fullname {
+            background-color: $color-alabaster;
+            height: 3rem;
+            width: 100%;
+            border: 1px solid $color-mercury;
+            border-radius: 0.25rem;
+            margin-bottom: 1.5rem;
+            @include tablet {
+            height: 3rem;
+            width: 100%;
+            }
+        }
+        &__fullname::placeholder {
+            color: $color-bandsite-black;
+            font-size: 1rem;
+            font-weight: 400;
+            padding: 0.75rem;
+            font-weight: 400;
+            font-family: 'AvenirNext LT Pro';
+        }
+        &__comment {
+            background-color: $color-alabaster;
+            height: 6rem;
+            width: 100%;
+            border: 1px solid $color-mercury;
+            border-radius: 0.25rem;
+            margin: 0.5rem 0rem 1rem 0rem;
+        }
+        &__comment::placeholder {
+            color: $color-bandsite-black;
+            font-size: 1rem;
+            font-weight: 400;
+            padding: 0.75rem;
+            font-weight: 400;
+            font-family: 'AvenirNext LT Pro';
+        }
+        &__submitButton {
+            background-color: $color-bandsite-black;
+            color: $color-white;
+            font-weight: 600;
+            border-radius: 0.25rem;;
+            height: 2.5rem;
+            width: 100%;
+        }
+        &__submit:hover {
+            background-color: $color-bandsite-dark-black;
+            color: $color-white;
         }
     }
 }
+
+/*form {
+    width: 100%;
+}*/
 
 label {
     color: $color-silver;
@@ -316,7 +370,7 @@ label {
     font-weight: 600;
     margin: 0.25rem 0rem;
 }
-
+/*
 input {
     background-color: $color-alabaster;
     height: 3rem;
@@ -369,7 +423,7 @@ button {
 button:hover {
     background-color: $color-bandsite-dark-black;
     color: $color-white;
-}
+}*/
 
 .comment-entered-section {
     display: flex;
