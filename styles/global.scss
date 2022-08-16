@@ -42,7 +42,7 @@ header {
         justify-content: center;
         align-items: center;
         width: 100%;
-        padding: 2rem 0rem 2rem 3rem;
+        padding: 2rem 0rem 2rem 0rem;
         @include page-header-mobile-logo;
         @include tablet {
             font-size: 3.75rem;
@@ -50,6 +50,7 @@ header {
             flex-direction: row;
             width: 40%;
             padding-bottom: 1rem;
+            margin-left: 2rem;
         }
         @include desktop {
             font-size: 3.75rem;

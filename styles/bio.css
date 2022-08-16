@@ -318,12 +318,13 @@
     line-height: 2.75rem;
     font-weight: 600;
     padding-top: 3rem;
-    margin: 1rem 1rem 1rem 5rem;
+    margin: 1rem 5rem 1rem 14rem;
   }
 }
 
 .form-section {
   display: flex;
+  position: relative;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
@@ -337,8 +338,8 @@
 }
 @media (min-width: 1200px) {
   .form-section {
-    justify-content: center;
-    margin: 1rem 10rem;
+    justify-content: left;
+    margin: 1rem 5rem 0 7rem;
   }
 }
 .form-section__user-pic {
@@ -356,8 +357,9 @@
 }
 @media (min-width: 1200px) {
   .form-section__user-pic {
-    padding-top: 1rem;
     width: 10%;
+    padding-top: 1rem;
+    margin-left: -6rem;
   }
 }
 .form-section__user-pic__image {
@@ -386,11 +388,22 @@
 @media (min-width: 768px) {
   .form-section__container {
     justify-content: left;
-    width: 90%;
+    width: 80%;
+  }
+}
+@media (min-width: 1200px) {
+  .form-section__container {
+    justify-content: left;
+    width: 68%;
   }
 }
 .form-section__container__user {
   width: 100%;
+}
+@media (min-width: 768px) {
+  .form-section__container__user {
+    width: 100%;
+  }
 }
 .form-section__container__fullname {
   background-color: #FAFAFA;
@@ -470,14 +483,26 @@
   height: 2.5rem;
   width: 100%;
 }
+@media (min-width: 768px) {
+  .form-section__container__submitButton {
+    width: 20%;
+    position: absolute;
+    right: 3.25rem;
+    bottom: 1rem;
+    top: 18rem;
+  }
+}
+@media (min-width: 1200px) {
+  .form-section__container__submitButton {
+    right: 17rem;
+    top: 17.5rem;
+  }
+}
 .form-section__container__submit:hover {
   background-color: #000000;
   color: #FFFFFF;
 }
 
-/*form {
-    width: 100%;
-}*/
 label {
   color: #AFAFAF;
   font-size: 0.9rem;
@@ -485,60 +510,6 @@ label {
   margin: 0.25rem 0rem;
 }
 
-/*
-input {
-    background-color: $color-alabaster;
-    height: 3rem;
-    width: 100%;
-    border: 1px solid $color-mercury;
-    border-radius: 0.25rem;
-    margin-bottom: 1.5rem;
-    @include tablet {
-        height: 3rem;
-        width: 100%;
-    }
-}
-
-input::placeholder {
-    color: $color-bandsite-black;
-    font-size: 1rem;
-    font-weight: 400;
-    padding: 0.75rem;
-    font-weight: 400;
-    font-family: 'AvenirNext LT Pro';
-}
-
-textarea {
-    background-color: $color-alabaster;
-    height: 6rem;
-    width: 100%;
-    border: 1px solid $color-mercury;
-    border-radius: 0.25rem;
-    margin: 0.5rem 0rem 1rem 0rem;
-}
-
-textarea::placeholder {
-    color: $color-bandsite-black;
-    font-size: 1rem;
-    font-weight: 400;
-    padding: 0.75rem;
-    font-weight: 400;
-    font-family: 'AvenirNext LT Pro';
-}
-
-button {
-    background-color: $color-bandsite-black;
-    color: $color-white;
-    font-weight: 600;
-    border-radius: 0.25rem;;
-    height: 2.5rem;
-    width: 100%;
-}
-
-button:hover {
-    background-color: $color-bandsite-dark-black;
-    color: $color-white;
-}*/
 .comment-entered-section {
   display: flex;
   border-top: 1px solid #E1E1E1;
@@ -548,6 +519,7 @@ button:hover {
 }
 @media (min-width: 768px) {
   .comment-entered-section {
+    justify-content: center;
     padding: 1rem 3rem;
   }
 }
@@ -622,5 +594,4 @@ button:hover {
   font-size: 1rem;
   width: 80%;
   height: 80%;
-  padding-left: 0rem;
 }/*# sourceMappingURL=bio.css.map */

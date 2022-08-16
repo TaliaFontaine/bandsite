@@ -55,12 +55,11 @@ const displayComment = (commentsEntered) => {
 
 axios.get(commentsURL).then((response) => {
     console.log(response.data)
-    .catch(error => console.log(error))
     displayComment(response.data); 
-});
+}).catch(error => console.log(error));
 
  //form
-const user = document.getElementById("form-section__container__user");
+const user = document.querySelector(".form-section__container__user");
 
 //event listener
 user.addEventListener("submit", (event) => {

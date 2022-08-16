@@ -249,12 +249,13 @@
         line-height: 2.75rem;
         font-weight: 600;
         padding-top: 3rem;
-        margin: 1rem 1rem 1rem 5rem;
+        margin: 1rem 5rem 1rem 14rem;
     } 
 }
 
 .form-section {
     display: flex;
+    position: relative;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
@@ -264,8 +265,8 @@
         margin: 1rem 2rem;
     }
     @include desktop {
-        justify-content: center;
-        margin: 1rem 10rem;
+        justify-content: left;
+        margin: 1rem 5rem 0 7rem;
     }
     &__user-pic {
         display: flex;
@@ -274,14 +275,13 @@
         width: 20%;
         padding-top: 1rem;  
         @include tablet {
-            
             width: 10%;
             padding-top: 1rem;
         }
         @include desktop {
-            padding-top: 1rem;
             width: 10%;
-
+            padding-top: 1rem;
+            margin-left: -6rem;
         }
     }
     &__user-pic__image {
@@ -304,12 +304,20 @@
         margin-left: 1rem;
         @include tablet {
             justify-content: left;
-            width: 90%;  
+            width: 80%;
         }
-        &__user {
+        @include desktop {
+            justify-content: left;
+            width: 68%;
+        }
+    }
+    &__container__user {
+            width: 100%;
+        @include tablet {
             width: 100%;
         }
-        &__fullname {
+    }
+    &__container__fullname {
             background-color: $color-alabaster;
             height: 3rem;
             width: 100%;
@@ -320,49 +328,55 @@
             height: 3rem;
             width: 100%;
             }
-        }
-        &__fullname::placeholder {
+    }
+    &__container__fullname::placeholder {
             color: $color-bandsite-black;
             font-size: 1rem;
             font-weight: 400;
             padding: 0.75rem;
             font-weight: 400;
             font-family: 'AvenirNext LT Pro';
-        }
-        &__comment {
+    }
+    &__container__comment {
             background-color: $color-alabaster;
             height: 6rem;
             width: 100%;
             border: 1px solid $color-mercury;
             border-radius: 0.25rem;
             margin: 0.5rem 0rem 1rem 0rem;
-        }
-        &__comment::placeholder {
+    }
+    &__container__comment::placeholder {
             color: $color-bandsite-black;
             font-size: 1rem;
             font-weight: 400;
             padding: 0.75rem;
             font-weight: 400;
             font-family: 'AvenirNext LT Pro';
-        }
-        &__submitButton {
+    }
+    &__container__submitButton {
             background-color: $color-bandsite-black;
             color: $color-white;
             font-weight: 600;
             border-radius: 0.25rem;;
             height: 2.5rem;
             width: 100%;
-        }
-        &__submit:hover {
+            @include tablet {
+                width: 20%;
+                position: absolute;
+                right: 3.25rem;
+                bottom: 1rem;
+                top: 18rem;
+            }
+            @include desktop {
+                right: 17rem;
+                top: 17.5rem;  
+            }
+    }
+    &__container__submit:hover {
             background-color: $color-bandsite-dark-black;
             color: $color-white;
-        }
     }
 }
-
-/*form {
-    width: 100%;
-}*/
 
 label {
     color: $color-silver;
@@ -370,60 +384,6 @@ label {
     font-weight: 600;
     margin: 0.25rem 0rem;
 }
-/*
-input {
-    background-color: $color-alabaster;
-    height: 3rem;
-    width: 100%;
-    border: 1px solid $color-mercury;
-    border-radius: 0.25rem;
-    margin-bottom: 1.5rem;
-    @include tablet {
-        height: 3rem;
-        width: 100%;
-    }
-}
-
-input::placeholder {
-    color: $color-bandsite-black;
-    font-size: 1rem;
-    font-weight: 400;
-    padding: 0.75rem;
-    font-weight: 400;
-    font-family: 'AvenirNext LT Pro';
-}
-
-textarea {
-    background-color: $color-alabaster;
-    height: 6rem;
-    width: 100%;
-    border: 1px solid $color-mercury;
-    border-radius: 0.25rem;
-    margin: 0.5rem 0rem 1rem 0rem;
-}
-
-textarea::placeholder {
-    color: $color-bandsite-black;
-    font-size: 1rem;
-    font-weight: 400;
-    padding: 0.75rem;
-    font-weight: 400;
-    font-family: 'AvenirNext LT Pro';
-}
-
-button {
-    background-color: $color-bandsite-black;
-    color: $color-white;
-    font-weight: 600;
-    border-radius: 0.25rem;;
-    height: 2.5rem;
-    width: 100%;
-}
-
-button:hover {
-    background-color: $color-bandsite-dark-black;
-    color: $color-white;
-}*/
 
 .comment-entered-section {
     display: flex;
@@ -432,6 +392,7 @@ button:hover {
     margin-bottom: 0.5rem;
     width: 100%;
     @include tablet {
+        justify-content: center;
         padding: 1rem 3rem;
     }
     @include desktop {
@@ -449,8 +410,7 @@ button:hover {
         align-items: center;
         width: 100%;
         padding-bottom: 1rem;
-        padding-top: 1rem; 
-
+        padding-top: 1rem;
     &__user-profile {
         flex-direction: column;
         align-items: flex-start;
@@ -485,7 +445,7 @@ button:hover {
         justify-content: left;
         align-items: center;
         font-size: 1rem; 
-        font-weight: 600;   
+        font-weight: 600; 
     }
     &__top-container__dateEntered {
         color: $color-silver;
@@ -499,8 +459,7 @@ button:hover {
         align-items: center;
         font-size: 1rem;
         width: 80%;
-        height: 80%; 
-        padding-left: 0rem;  
+        height: 80%;
     }
 }
 
